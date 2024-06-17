@@ -9,14 +9,25 @@ CONFIG += c++17
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    CustomFunc.cpp \
     main.cpp \
-    stoxwindow.cpp
+    stoxwindow.cpp \
+    wobuy.cpp \
+    womanage.cpp \
+    wosell.cpp
 
 HEADERS += \
-    stoxwindow.h
+    CustomFunc.h \
+    stoxwindow.h \
+    wobuy.h \
+    womanage.h \
+    wosell.h
 
 FORMS += \
-    stoxwindow.ui
+    stoxwindow.ui \
+    wobuy.ui \
+    womanage.ui \
+    wosell.ui
 
 win32:CONFIG(release, debug|release): LIBS += -L$$PWD/'../../../../../Program Files/MySQL/MySQL Server 8.0/lib/' -llibmysql
 else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/'../../../../../Program Files/MySQL/MySQL Server 8.0/lib/' -llibmysql

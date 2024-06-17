@@ -39,16 +39,42 @@
    <layout class="QGridLayout" name="gridLayout_5">
     <item row="1" column="0" colspan="2">
      <widget class="QTabWidget" name="tabWidget">
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
       <property name="currentIndex">
        <number>0</number>
       </property>
-      <widget class="QWidget" name="tab_produtos">
+      <widget class="QWidget" name="tab_product">
        <attribute name="title">
         <string>Produtos</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_2">
         <item row="0" column="0">
-         <widget class="QTableWidget" name="tableWidget"/>
+         <widget class="QTableView" name="product_table">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="alternatingRowColors">
+           <bool>false</bool>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::SingleSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+          <property name="sortingEnabled">
+           <bool>false</bool>
+          </property>
+          <attribute name="horizontalHeaderStretchLastSection">
+           <bool>false</bool>
+          </attribute>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -58,263 +84,22 @@
        </attribute>
        <layout class="QGridLayout" name="gridLayout_3">
         <item row="0" column="0">
-         <widget class="QTableWidget" name="tableWidget_2"/>
+         <widget class="QTableView" name="client_table">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::SingleSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectRows</enum>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>
-     </widget>
-    </item>
-    <item row="0" column="1">
-     <widget class="QGroupBox" name="ClientBox">
-      <property name="font">
-       <font>
-        <pointsize>14</pointsize>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="title">
-       <string>CLIENTE</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-      <layout class="QGridLayout" name="gridLayout">
-       <item row="3" column="1" colspan="5">
-        <widget class="QPlainTextEdit" name="t_AddressClient">
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>56</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="undoRedoEnabled">
-          <bool>false</bool>
-         </property>
-         <property name="placeholderText">
-          <string>[endereço]</string>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="0">
-        <widget class="QPushButton" name="b_ProductInsert_2">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>INSERT</string>
-         </property>
-        </widget>
-       </item>
-       <item row="6" column="0">
-        <spacer name="verticalSpacer">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="0" column="0">
-        <widget class="QLabel" name="label_7">
-         <property name="maximumSize">
-          <size>
-           <width>70</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>Nome:</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="0">
-        <widget class="QLabel" name="label_10">
-         <property name="maximumSize">
-          <size>
-           <width>70</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>Endereço:</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1" colspan="5">
-        <widget class="QPlainTextEdit" name="t_NameClient">
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>28</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="undoRedoEnabled">
-          <bool>false</bool>
-         </property>
-         <property name="placeholderText">
-          <string>[nome]</string>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="1">
-        <widget class="QPushButton" name="b_ProductDelete_2">
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>DELETE</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="label_9">
-         <property name="maximumSize">
-          <size>
-           <width>70</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>Contato:</string>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="3">
-        <spacer name="horizontalSpacer">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>40</width>
-           <height>20</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="label_8">
-         <property name="maximumSize">
-          <size>
-           <width>75</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>Empresa:</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1" colspan="5">
-        <widget class="QPlainTextEdit" name="t_ContactClient">
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>28</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="layoutDirection">
-          <enum>Qt::LeftToRight</enum>
-         </property>
-         <property name="lineWidth">
-          <number>0</number>
-         </property>
-         <property name="placeholderText">
-          <string>[contato]</string>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="2">
-        <widget class="QPushButton" name="b_ProductUpdate_2">
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>UPDATE</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1" colspan="5">
-        <widget class="QPlainTextEdit" name="t_CompanyClient">
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>28</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="placeholderText">
-          <string>[empresa]</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
      </widget>
     </item>
     <item row="0" column="0">
@@ -354,115 +139,6 @@
        <property name="verticalSpacing">
         <number>6</number>
        </property>
-       <item row="16" column="3" colspan="7">
-        <widget class="QPlainTextEdit" name="t_Price">
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>28</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-           <italic>false</italic>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="layoutDirection">
-          <enum>Qt::LeftToRight</enum>
-         </property>
-         <property name="lineWidth">
-          <number>0</number>
-         </property>
-         <property name="placeholderText">
-          <string>R$ 0,00</string>
-         </property>
-        </widget>
-       </item>
-       <item row="17" column="2" colspan="12">
-        <widget class="QLabel" name="label_6">
-         <property name="font">
-          <font>
-           <pointsize>14</pointsize>
-           <italic>false</italic>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>Description:</string>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="2">
-        <widget class="QLabel" name="label">
-         <property name="maximumSize">
-          <size>
-           <width>70</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-           <italic>false</italic>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>Nome:</string>
-         </property>
-        </widget>
-       </item>
-       <item row="19" column="2">
-        <widget class="QPushButton" name="product_insert">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-           <italic>false</italic>
-           <bold>true</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>INSERT</string>
-         </property>
-        </widget>
-       </item>
-       <item row="16" column="13">
-        <widget class="QPlainTextEdit" name="t_Cost">
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>28</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-           <italic>false</italic>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="layoutDirection">
-          <enum>Qt::LeftToRight</enum>
-         </property>
-         <property name="lineWidth">
-          <number>0</number>
-         </property>
-         <property name="placeholderText">
-          <string>R$ 0,00</string>
-         </property>
-        </widget>
-       </item>
        <item row="7" column="2">
         <widget class="QLabel" name="label_3">
          <property name="maximumSize">
@@ -479,70 +155,7 @@
           </font>
          </property>
          <property name="text">
-          <string>UPC:</string>
-         </property>
-        </widget>
-       </item>
-       <item row="10" column="2">
-        <widget class="QLabel" name="label_4">
-         <property name="maximumSize">
-          <size>
-           <width>75</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-           <italic>false</italic>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>Empresa:</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="3" colspan="11">
-        <widget class="QPlainTextEdit" name="i_name">
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>28</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-           <italic>false</italic>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="undoRedoEnabled">
-          <bool>false</bool>
-         </property>
-         <property name="placeholderText">
-          <string>[nome]</string>
-         </property>
-        </widget>
-       </item>
-       <item row="16" column="10">
-        <widget class="QLabel" name="label_12">
-         <property name="maximumSize">
-          <size>
-           <width>65</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>12</pointsize>
-           <italic>false</italic>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="text">
-          <string>Custo:</string>
+          <string>EAN:</string>
          </property>
         </widget>
        </item>
@@ -566,8 +179,57 @@
          </property>
         </widget>
        </item>
-       <item row="19" column="3">
-        <widget class="QPushButton" name="b_ProductDelete">
+       <item row="3" column="2">
+        <widget class="QLabel" name="label_2">
+         <property name="maximumSize">
+          <size>
+           <width>70</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Qtd.:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="16" column="3" colspan="7">
+        <widget class="QPlainTextEdit" name="product_price">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="cursor" stdset="0">
+          <cursorShape>IBeamCursor</cursorShape>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="lineWidth">
+          <number>0</number>
+         </property>
+         <property name="placeholderText">
+          <string>R$ 0,00</string>
+         </property>
+        </widget>
+       </item>
+       <item row="20" column="3">
+        <widget class="QPushButton" name="product_delete">
          <property name="font">
           <font>
            <pointsize>12</pointsize>
@@ -577,20 +239,6 @@
          </property>
          <property name="text">
           <string>DELETE</string>
-         </property>
-        </widget>
-       </item>
-       <item row="18" column="2" colspan="12">
-        <widget class="QPlainTextEdit" name="t_Description">
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-           <italic>false</italic>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="cursor" stdset="0">
-          <cursorShape>ArrowCursor</cursorShape>
          </property>
         </widget>
        </item>
@@ -615,7 +263,7 @@
         </widget>
        </item>
        <item row="7" column="3" colspan="11">
-        <widget class="QPlainTextEdit" name="t_UPC">
+        <widget class="QPlainTextEdit" name="product_ean">
          <property name="maximumSize">
           <size>
            <width>16777215</width>
@@ -629,13 +277,16 @@
            <bold>false</bold>
           </font>
          </property>
+         <property name="cursor" stdset="0">
+          <cursorShape>IBeamCursor</cursorShape>
+         </property>
          <property name="placeholderText">
-          <string>000000000000</string>
+          <string>0000000000000</string>
          </property>
         </widget>
        </item>
-       <item row="3" column="2">
-        <widget class="QLabel" name="label_2">
+       <item row="0" column="2">
+        <widget class="QLabel" name="label">
          <property name="maximumSize">
           <size>
            <width>70</width>
@@ -650,12 +301,53 @@
           </font>
          </property>
          <property name="text">
-          <string>Qtd.:</string>
+          <string>Nome:</string>
          </property>
         </widget>
        </item>
-       <item row="12" column="3" rowspan="2" colspan="11">
-        <widget class="QPlainTextEdit" name="t_Contact">
+       <item row="19" column="2" colspan="12">
+        <widget class="Line" name="line">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="18" column="2" colspan="12">
+        <widget class="QPlainTextEdit" name="product_description">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="cursor" stdset="0">
+          <cursorShape>IBeamCursor</cursorShape>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="2">
+        <widget class="QLabel" name="label_4">
+         <property name="maximumSize">
+          <size>
+           <width>85</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Fornecedor:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="3" colspan="11">
+        <widget class="QPlainTextEdit" name="product_amount">
          <property name="maximumSize">
           <size>
            <width>16777215</width>
@@ -668,6 +360,32 @@
            <italic>false</italic>
            <bold>false</bold>
           </font>
+         </property>
+         <property name="cursor" stdset="0">
+          <cursorShape>IBeamCursor</cursorShape>
+         </property>
+         <property name="placeholderText">
+          <string>0</string>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="3" rowspan="2" colspan="11">
+        <widget class="QPlainTextEdit" name="product_contact">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="cursor" stdset="0">
+          <cursorShape>IBeamCursor</cursorShape>
          </property>
          <property name="layoutDirection">
           <enum>Qt::LeftToRight</enum>
@@ -680,8 +398,77 @@
          </property>
         </widget>
        </item>
-       <item row="19" column="4">
-        <widget class="QPushButton" name="b_ProductUpdate">
+       <item row="16" column="13">
+        <widget class="QPlainTextEdit" name="product_cost">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="cursor" stdset="0">
+          <cursorShape>IBeamCursor</cursorShape>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="lineWidth">
+          <number>0</number>
+         </property>
+         <property name="placeholderText">
+          <string>R$ 0,00</string>
+         </property>
+        </widget>
+       </item>
+       <item row="20" column="2">
+        <widget class="QPushButton" name="product_insert">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>INSERT</string>
+         </property>
+        </widget>
+       </item>
+       <item row="16" column="10">
+        <widget class="QLabel" name="label_12">
+         <property name="maximumSize">
+          <size>
+           <width>65</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Custo:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="20" column="4">
+        <widget class="QPushButton" name="product_update">
          <property name="font">
           <font>
            <pointsize>12</pointsize>
@@ -694,8 +481,8 @@
          </property>
         </widget>
        </item>
-       <item row="3" column="3" colspan="11">
-        <widget class="QPlainTextEdit" name="input_amount">
+       <item row="0" column="3" colspan="11">
+        <widget class="QPlainTextEdit" name="product_name">
          <property name="maximumSize">
           <size>
            <width>16777215</width>
@@ -709,13 +496,19 @@
            <bold>false</bold>
           </font>
          </property>
+         <property name="cursor" stdset="0">
+          <cursorShape>IBeamCursor</cursorShape>
+         </property>
+         <property name="undoRedoEnabled">
+          <bool>false</bool>
+         </property>
          <property name="placeholderText">
-          <string>0</string>
+          <string>[nome]</string>
          </property>
         </widget>
        </item>
        <item row="10" column="3" colspan="11">
-        <widget class="QPlainTextEdit" name="t_Company">
+        <widget class="QPlainTextEdit" name="product_supplier">
          <property name="maximumSize">
           <size>
            <width>16777215</width>
@@ -729,8 +522,303 @@
            <bold>false</bold>
           </font>
          </property>
+         <property name="cursor" stdset="0">
+          <cursorShape>IBeamCursor</cursorShape>
+         </property>
+         <property name="placeholderText">
+          <string>[fornecedor]</string>
+         </property>
+        </widget>
+       </item>
+       <item row="17" column="2" colspan="12">
+        <widget class="QLabel" name="label_6">
+         <property name="font">
+          <font>
+           <pointsize>14</pointsize>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Descrição:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QGroupBox" name="ClientBox">
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="title">
+       <string>CLIENTE</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="13" column="0">
+        <widget class="QPushButton" name="client_insert">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>INSERT</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1" colspan="5">
+        <widget class="QPlainTextEdit" name="client_company">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="cursor" stdset="0">
+          <cursorShape>IBeamCursor</cursorShape>
+         </property>
          <property name="placeholderText">
           <string>[empresa]</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_7">
+         <property name="maximumSize">
+          <size>
+           <width>70</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Nome:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1" colspan="5">
+        <widget class="QPlainTextEdit" name="client_address">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>56</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="cursor" stdset="0">
+          <cursorShape>IBeamCursor</cursorShape>
+         </property>
+         <property name="undoRedoEnabled">
+          <bool>false</bool>
+         </property>
+         <property name="placeholderText">
+          <string>[endereço]</string>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="2">
+        <widget class="QPushButton" name="client_update">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>UPDATE</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QLabel" name="label_10">
+         <property name="maximumSize">
+          <size>
+           <width>70</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Endereço:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="14" column="0">
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="1" column="0">
+        <widget class="QLabel" name="label_8">
+         <property name="maximumSize">
+          <size>
+           <width>75</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Empresa:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1" colspan="5">
+        <widget class="QPlainTextEdit" name="client_name">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="cursor" stdset="0">
+          <cursorShape>IBeamCursor</cursorShape>
+         </property>
+         <property name="undoRedoEnabled">
+          <bool>false</bool>
+         </property>
+         <property name="placeholderText">
+          <string>[nome]</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1" colspan="5">
+        <widget class="QPlainTextEdit" name="client_contact">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="cursor" stdset="0">
+          <cursorShape>IBeamCursor</cursorShape>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="lineWidth">
+          <number>0</number>
+         </property>
+         <property name="placeholderText">
+          <string>[contato]</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QLabel" name="label_9">
+         <property name="maximumSize">
+          <size>
+           <width>70</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Contato:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="1">
+        <widget class="QPushButton" name="client_delete">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>DELETE</string>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="3">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="12" column="0" colspan="6">
+        <widget class="Line" name="line_2">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
          </property>
         </widget>
        </item>
@@ -754,33 +842,34 @@
     </property>
     <widget class="QMenu" name="menuRequester">
      <property name="title">
-      <string>Requester</string>
+      <string>Ordem de Serviço</string>
      </property>
      <addaction name="separator"/>
      <addaction name="separator"/>
-     <addaction name="actionCreate"/>
-     <addaction name="actionManage"/>
+     <addaction name="wo_sell"/>
+     <addaction name="wo_buy"/>
+     <addaction name="separator"/>
+     <addaction name="wo_manage"/>
     </widget>
     <addaction name="separator"/>
     <addaction name="menuRequester"/>
     <addaction name="separator"/>
-    <addaction name="actionSQL"/>
    </widget>
    <addaction name="menuMenu"/>
   </widget>
-  <action name="actionCreate">
+  <action name="wo_sell">
    <property name="text">
-    <string>Create</string>
+    <string>Baixa</string>
    </property>
   </action>
-  <action name="actionManage">
+  <action name="wo_buy">
    <property name="text">
-    <string>Manage</string>
+    <string>Compra</string>
    </property>
   </action>
-  <action name="actionSQL">
+  <action name="wo_manage">
    <property name="text">
-    <string>SQL</string>
+    <string>Gerenciar</string>
    </property>
   </action>
  </widget>
