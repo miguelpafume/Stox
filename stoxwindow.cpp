@@ -108,6 +108,16 @@ void StoxWindow::on_product_delete_clicked() {
 void StoxWindow::on_product_update_clicked() {
     db->open();
 
+    if (ui->product_name->toPlainText() == "") {
+        SimpleMessageBox("Nome vazio.\nCampo não pode estar incompleto.", 1);
+        db->close();
+        return;
+    } else if (ui->product_ean->toPlainText() == "") {
+        SimpleMessageBox("EAN vazio.\nCampo não pode estar incompleto.", 1);
+        db->close();
+        return;
+    }
+
     if (ui->product_ean->toPlainText() == "") {
         SimpleMessageBox("EAN vazio.\nCampo não pode estar incompleto.", 1);
         db->close();
@@ -300,7 +310,11 @@ void StoxWindow::on_client_update_clicked() {
     qry.exec();
 
     qry.next();
-    qDebug() << qry.size();
+    if (qry.size() == 0) {
+        SimpleMessageBox("Nome e Empresa não podem ser alterados.", 1);
+        db->close();
+        return;
+    }
 
     qry.prepare("UPDATE debug_client SET contact = ?, address = ? WHERE name = ? AND company = ?");
 
@@ -364,5 +378,25 @@ void StoxWindow::on_wo_manage_triggered() {
     ManageWindow->setModal(true);
     ManageWindow->exec();
     UpdateProductTable();
+}
+
+
+void StoxWindow::on_product_clean_clicked() {
+    ui->product_name->setPlainText("");
+    ui->product_amount->setPlainText("");
+    ui->product_ean->setPlainText("");
+    ui->product_supplier->setPlainText("");
+    ui->product_contact->setPlainText("");
+    ui->product_price->setPlainText("");
+    ui->product_cost->setPlainText("");
+    ui->product_description->setPlainText("");
+}
+
+
+void StoxWindow::on_client_clean_clicked() {
+    ui->client_name->setPlainText("");
+    ui->client_company->setPlainText("");
+    ui->client_contact->setPlainText("");
+    ui->client_address->setPlainText("");
 }
 

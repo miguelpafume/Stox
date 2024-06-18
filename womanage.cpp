@@ -29,7 +29,7 @@ void WOManage::UpdateTables() {
     inprogress_model->setHeaderData(1, Qt::Horizontal, tr("QTD."));
     inprogress_model->setHeaderData(2, Qt::Horizontal, tr("CLIENTE"));
     inprogress_model->setHeaderData(3, Qt::Horizontal, tr("EMPRESA"));
-    inprogress_model->setHeaderData(4, Qt::Horizontal, tr("RAZÃO"));
+    inprogress_model->setHeaderData(4, Qt::Horizontal, tr("STATUS"));
     inprogress_model->setHeaderData(7, Qt::Horizontal, tr("FATURAMENTO"));
 
     ui->inprogress_table->setModel(inprogress_model);
@@ -44,7 +44,7 @@ void WOManage::UpdateTables() {
     concluded_model->setHeaderData(1, Qt::Horizontal, tr("QTD."));
     concluded_model->setHeaderData(2, Qt::Horizontal, tr("CLIENTE"));
     concluded_model->setHeaderData(3, Qt::Horizontal, tr("EMPRESA"));
-    concluded_model->setHeaderData(4, Qt::Horizontal, tr("RAZÃO"));
+    concluded_model->setHeaderData(4, Qt::Horizontal, tr("STATUS"));
     concluded_model->setHeaderData(7, Qt::Horizontal, tr("FATURAMENTO"));
 
     ui->concluded_table->setModel(concluded_model);
@@ -60,7 +60,7 @@ void WOManage::UpdateTables() {
     canceled_model->setHeaderData(1, Qt::Horizontal, tr("QTD."));
     canceled_model->setHeaderData(2, Qt::Horizontal, tr("CLIENTE"));
     canceled_model->setHeaderData(3, Qt::Horizontal, tr("EMPRESA"));
-    canceled_model->setHeaderData(4, Qt::Horizontal, tr("RAZÃO"));
+    canceled_model->setHeaderData(4, Qt::Horizontal, tr("STATUS"));
     canceled_model->setHeaderData(7, Qt::Horizontal, tr("FATURAMENTO"));
 
     ui->canceled_table->setModel(canceled_model);

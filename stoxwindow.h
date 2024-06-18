@@ -45,6 +45,10 @@ class StoxWindow : public QMainWindow {
 
         void on_wo_manage_triggered();
 
+        void on_product_clean_clicked();
+
+        void on_client_clean_clicked();
+
     private:
         Ui::StoxWindow *ui;
         QSqlDatabase *db = new QSqlDatabase(QSqlDatabase::addDatabase("QMYSQL"));

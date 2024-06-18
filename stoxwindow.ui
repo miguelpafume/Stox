@@ -238,7 +238,7 @@
           </font>
          </property>
          <property name="text">
-          <string>DELETE</string>
+          <string>EXCLUIR</string>
          </property>
         </widget>
        </item>
@@ -398,35 +398,6 @@
          </property>
         </widget>
        </item>
-       <item row="16" column="13">
-        <widget class="QPlainTextEdit" name="product_cost">
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>28</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-           <italic>false</italic>
-           <bold>false</bold>
-          </font>
-         </property>
-         <property name="cursor" stdset="0">
-          <cursorShape>IBeamCursor</cursorShape>
-         </property>
-         <property name="layoutDirection">
-          <enum>Qt::LeftToRight</enum>
-         </property>
-         <property name="lineWidth">
-          <number>0</number>
-         </property>
-         <property name="placeholderText">
-          <string>R$ 0,00</string>
-         </property>
-        </widget>
-       </item>
        <item row="20" column="2">
         <widget class="QPushButton" name="product_insert">
          <property name="minimumSize">
@@ -443,7 +414,7 @@
           </font>
          </property>
          <property name="text">
-          <string>INSERT</string>
+          <string>INSERIR</string>
          </property>
         </widget>
        </item>
@@ -477,7 +448,7 @@
           </font>
          </property>
          <property name="text">
-          <string>UPDATE</string>
+          <string>ATUALIZAR</string>
          </property>
         </widget>
        </item>
@@ -547,6 +518,49 @@
          </property>
         </widget>
        </item>
+       <item row="16" column="11" colspan="3">
+        <widget class="QPlainTextEdit" name="product_cost">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>28</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="cursor" stdset="0">
+          <cursorShape>IBeamCursor</cursorShape>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="lineWidth">
+          <number>0</number>
+         </property>
+         <property name="placeholderText">
+          <string>R$ 0,00</string>
+         </property>
+        </widget>
+       </item>
+       <item row="20" column="13">
+        <widget class="QPushButton" name="product_clean">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>LIMPAR</string>
+         </property>
+        </widget>
+       </item>
       </layout>
      </widget>
     </item>
@@ -580,7 +594,7 @@
           </font>
          </property>
          <property name="text">
-          <string>INSERT</string>
+          <string>INSERIR</string>
          </property>
         </widget>
        </item>
@@ -659,7 +673,7 @@
           </font>
          </property>
          <property name="text">
-          <string>UPDATE</string>
+          <string>ATUALIZAR</string>
          </property>
         </widget>
        </item>
@@ -798,7 +812,7 @@
           </font>
          </property>
          <property name="text">
-          <string>DELETE</string>
+          <string>EXCLUIR</string>
          </property>
         </widget>
        </item>
@@ -819,6 +833,20 @@
         <widget class="Line" name="line_2">
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="4">
+        <widget class="QPushButton" name="client_clean">
+         <property name="font">
+          <font>
+           <pointsize>12</pointsize>
+           <italic>false</italic>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>LIMPAR</string>
          </property>
         </widget>
        </item>

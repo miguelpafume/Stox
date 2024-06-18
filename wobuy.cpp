@@ -30,10 +30,10 @@ void WOBuy::SetDatabase(QSqlDatabase *db) {
 
     // Client table
     QSqlQueryModel *client_model = new QSqlQueryModel;
-    client_model->setQuery("SELECT name, company FROM debug_client");
+    client_model->setQuery("SELECT supplier, contact FROM debug_product");
 
-    client_model->setHeaderData(0, Qt::Horizontal, tr("NOME"));
-    client_model->setHeaderData(1, Qt::Horizontal, tr("EMPRESA"));
+    client_model->setHeaderData(0, Qt::Horizontal, tr("FORNECEDOR"));
+    client_model->setHeaderData(1, Qt::Horizontal, tr("CONTATO"));
 
     ui->client_table->setModel(client_model);
 
